@@ -1,0 +1,14 @@
+{
+    "main_title": "LIÊN HỆ VỚI CHÚNG TÔI",
+    "welcome_text": "Chào mừng bạn đến với trang Liên hệ!",
+    "description": "Bạn có câu hỏi, ý tưởng hay gợi ý nào không? Nếu bạn thiếu thông tin hoặc đơn giản là muốn trao đổi cùng chúng tôi, đừng ngần ngại viết thư cho chúng tôi. Chúng tôi rất hân hạnh được lắng nghe và sẽ phản hồi bạn trong thời gian sớm nhất.",
+    "contact_email": "info@vnct.org",
+    "name_label": "Họ và tên*",
+    "email_label": "Email*",
+    "subject_label": "Tiêu đề*",
+    "content_label": "Tin nhắn*",
+    "submit_button": "GỬI NGAY",
+    "map_embed": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d66435.24627752659!2d2.290275381173554!3d48.82455905828804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6722f75f15ea7%3A0x97fe781fd550d50e!2s19%20Rue%20Albert%2C%2075013%20Paris%2C%20France!5e1!3m2!1sen!2s!4v1763544671159!5m2!1sen!2s",
+    "success_message": "Gửi tin nhắn thành công!",
+    "failed_message": "Đã xảy ra lỗi. Vui lòng thử lại sau."
+}

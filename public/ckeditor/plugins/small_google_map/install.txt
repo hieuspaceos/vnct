@@ -1,0 +1,27 @@
+With this plugin you can set ONE map with ONE marker to a page. The plugin uses API V3 and sets pure javascript to your page.
+
+[b]Known bug:[/b] For width and height a div contained the map code. This div is replaced by a fakeelement. If there is no parent element, CKEditor adds paragraphs around.
+
+[b]Correct translation is needed![/b]
+
+
+[b]License[/b]
+
+Licensed under the terms of the [url=http://www.gnu.org/licenses/gpl.html]GPL[/url].
+
+
+[b]Download[/b]
+
+[url=http://]Basic Google Map[/url]
+
+
+[b]Installation[/b]
+
+1. Extract the archiv and copy the "gmap" folder to CKEditors "plugins" folder.
+2. In the CKEditor configuration file (config.js) add the following code:
+
+[code]
+config.menu_groups = 'googlemaps';
+config.extraPlugins = 'gmap';
+config.toolbar_YourToolbarName = [ ['Button','Button','gMap'] ];
+[/code]

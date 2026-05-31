@@ -1,0 +1,14 @@
+{
+    "main_title": "CONTACTEZ-NOUS",
+    "welcome_text": "Bienvenue sur notre page Contact !",
+    "description": "Une question, une envie, une suggestion ? Si une information vous manque ou si vous souhaitez simplement échanger avec nous, n’hésitez pas à nous écrire. Nous serons ravis de vous lire et de vous répondre dans les meilleurs délais.",
+    "contact_email": "info@vnct.org",
+    "name_label": "Nom et Prénom*",
+    "email_label": "Email*",
+    "subject_label": "Sujet*",
+    "content_label": "Message*",
+    "submit_button": "SOUMETTRE MAINTENANT",
+    "map_embed": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d66435.24627752659!2d2.290275381173554!3d48.82455905828804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6722f75f15ea7%3A0x97fe781fd550d50e!2s19%20Rue%20Albert%2C%2075013%20Paris%2C%20France!5e1!3m2!1sen!2s!4v1763544671159!5m2!1sen!2s",
+    "success_message": "Votre message a été envoyé avec succès !",
+    "failed_message": "Une erreur s'est produite. Veuillez réessayer."
+}

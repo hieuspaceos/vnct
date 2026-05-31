@@ -1,0 +1,1 @@
+{"data":[{"id":1,"Name":"không","Ma_Mau":""},{"id":2,"Name":"3 hủ","Ma_Mau":"#000000"},{"id":3,"Name":"6 hủ","Ma_Mau":"#000000"}]}

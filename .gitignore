@@ -1,0 +1,53 @@
+# Database (local only, never commit)
+/database
+
+# Laravel
+/vendor/
+/node_modules/
+/node_modules/@lmh
+/.env
+/.env.backup
+/.env.production
+/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+*.swp
+*.swo
+*~
+
+# Storage (runtime files)
+/storage/*.key
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+!/storage/framework/.gitkeep
+!/storage/logs/.gitkeep
+
+# Public assets (compiled)
+/public/css/
+/public/js/
+/public/mix-manifest.json
+/public/hot
+/public/storage
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+*.cache
+
+# Error logs
+/public/error_log
+
+# User uploads (local only, never commit)
+/public/uploads
+
+# Vendor ckfinder cache
+/public/ckfinder/cache/*
+!/public/ckfinder/cache/.gitkeep

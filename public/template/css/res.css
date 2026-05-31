@@ -1,0 +1,117 @@
+/* CSS Document */
+@media screen and (min-width:1024px )
+
+{
+	.sub-nav-menu .nav-item-dropdown:hover > .submenu-ul {
+    	opacity: 1;
+    	visibility: visible;
+	}
+	.sub-nav-menu .nav-item-dropdown:hover .dropdown-toggle-ul {
+	    color: var(--main-red); /* Màu khi hover mục chính */
+	}
+	.sub-nav-menu a:hover {
+	    color: var(--main-red);
+	}
+}
+@media screen and (max-width:1024px )
+
+{
+	.w-lg-25 {
+    width: 100% !important;
+}
+	.sub-nav-menu .nav-item-dropdown.hover
+	{
+		color:var(--main-red);
+	}
+	.sub-nav-menu
+	{
+		justify-content: start;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	.content-left {display: none !important}
+	.custom-footer
+	{
+		padding-left: 0
+	}
+	.grid-4
+{
+	 grid-template-columns: repeat(2, 1fr) !important;
+}
+}
+
+@media screen and (max-width:768px )
+
+{
+	.main-nav > div > div{padding: 0}
+	.custom-logo{justify-content: center;}
+	.header-right
+	{
+		flex-direction: column;        gap: 2px !important;
+	}
+	.connect
+	{
+		height: auto;
+	}
+	.connect h2 {
+    font-size: 28px;
+}
+.connect-content .custom-load-more
+{
+	max-width: 100%;
+    text-wrap: auto;
+}
+	.grid-2 {
+    
+    grid-template-columns: repeat(1, 1fr) !important;
+   
+}
+.grid-3 {
+   
+    grid-template-columns: repeat(1, 1fr) !important;
+   
+}
+.grid-4
+{
+	 grid-template-columns: repeat(1, 1fr) !important;
+}
+	.search-box .fa-search
+	{
+		display: none;
+	}
+	.search-button
+	{
+		padding: 2px 8px;
+	}
+	#search-input
+	{
+		    width: inherit;
+	}
+	.search-box
+	{
+		    padding: 5px 5px;
+	}
+	#current-lang-text
+	{
+		display: none;
+	}
+	
+
+	header
+	{
+		position: sticky;
+	    left: 0;
+	    top: 0;
+	    z-index: 5;
+	    background: #fff;
+	}
+	.sub-nav-menu
+	{
+		margin-bottom: 0;
+		        margin-top: 0;
+	}
+	.main-nav{
+		    padding: 5px 15px;
+	}
+
+}
