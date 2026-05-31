@@ -20,7 +20,7 @@
 
       @include('admin.blocks.alert')
 
-      <form action="checklogin" method="post">
+      <form action="{{ route('login_admin') }}/checklogin" method="post">
 
         <div class="input-group mb-3">
 

@@ -10,7 +10,7 @@
 
   <title>{{$title}}</title>
 
-<base href="https://vnct.org/admin/" >
+<base href="{{ url('/admin') }}/" >
 
   <!-- Google Font: Source Sans Pro -->
 
