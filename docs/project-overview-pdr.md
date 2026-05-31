@@ -21,9 +21,12 @@
 | Frontend | Blade + Tailwind CSS | - |
 | Interactive | Livewire | 2.5 |
 | Auth | Jetstream + Sanctum | 2.4 / 2.11 |
+| OAuth | Socialite | 5.2 |
 | Database | MySQL/MariaDB | - |
 | File Manager | CKFinder | 3.5.2.1 |
+| Rich Text | CKEditor | - |
 | E-commerce | ShoppingCart | 4.0 |
+| Email | PHPMailer | 6.5 |
 | PHP Version | PHP | 7.3+ / 8.0 |
 
 ## Core Features
@@ -41,9 +44,10 @@
 - Review and rating system
 
 ### 3. Business Portal
-- Business registration workflow
-- Approval system
+- Business registration workflow at `/business`
+- Approval system with admin interface
 - Business profile management
+- Business-specific views (`resources/views/business/`)
 
 ### 4. Multilingual Support
 - French (fr), Vietnamese (vi), English (en), Spanish (es)

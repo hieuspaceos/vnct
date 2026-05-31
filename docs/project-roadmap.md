@@ -8,7 +8,7 @@ This roadmap tracks the development phases and future improvements for the VNCT 
 
 - **Phase:** Active Development
 - **Last Updated:** 2026-05-31
-- **Version:** 1.0 (initial documentation)
+- **Version:** 1.1
 
 ## Technology Stack
 
@@ -168,13 +168,15 @@ This roadmap tracks the development phases and future improvements for the VNCT 
 | Milestone | Target | Status |
 |-----------|--------|--------|
 | Phase 1: Foundation | Q1 2024 | Completed |
-| Phase 2: E-commerce | Q2 2024 | In Progress |
-| Phase 3: Business Portal | Q3 2024 | Planned |
-| Phase 4: Content Enhancement | Q4 2024 | Planned |
+| Phase 2: E-commerce | Q2 2024 | Completed |
+| Phase 3: Business Portal | Q3 2024 | Completed |
+| Phase 4: Content Enhancement | Q4 2024 | In Progress |
 | Phase 5: User Experience | Q1 2025 | Planned |
 | Phase 6: API & Integrations | Q2 2025 | Planned |
 | Phase 7: Performance & Security | Q3 2025 | Planned |
 | Phase 8: Deployment & DevOps | Q4 2025 | Planned |
+
+**Note:** As of 2026-05-31, development timeline has slipped significantly from original plan.
 
 ---
 
@@ -184,11 +186,12 @@ This roadmap tracks the development phases and future improvements for the VNCT 
 - [ ] Upgrade Laravel 8.54 to 10.x
 - [ ] PHP 8.2 compatibility check
 - [ ] Livewire 2.5 to 3.x migration
+- [ ] Evaluate `bumbummen99/shoppingcart` replacement (package may be abandoned)
 
 ### Medium Priority
 - [ ] Refactor large controllers (PageController.php 31KB)
-- [ ] Extract business logic to service classes
 - [ ] Add unit tests for core functionality
+- [ ] Document Lib class responsibilities
 
 ### Low Priority
 - [ ] Code comment cleanup
@@ -209,7 +212,8 @@ This roadmap tracks the development phases and future improvements for the VNCT 
   "ckfinder/ckfinder-laravel-package": "v3.5.2.1",
   "bumbummen99/shoppingcart": "^4.0",
   "mediconesystems/livewire-datatables": "^0.6.8",
-  "phpmailer/phpmailer": "^6.5"
+  "phpmailer/phpmailer": "^6.5",
+  "laravel/socialite": "^5.2"
 }
 ```
 
@@ -229,6 +233,13 @@ This roadmap tracks the development phases and future improvements for the VNCT 
 ---
 
 ## Changelog
+
+### v1.1 (2026-05-31)
+- Updated milestones: Phase 2-3 marked completed, Phase 4 in progress
+- Added shoppingcart package warning (potential abandonment)
+- Added Socialite to dependencies
+- Updated Lib layer documentation
+- Added Livewire component layer to architecture
 
 ### v1.0 (2026-05-31)
 - Initial documentation created

@@ -27,8 +27,8 @@ Laravel 8.54 application with 28 Eloquent models, 14 admin controllers, Livewire
 │   │   │   ├── SearchController.php
 │   │   │   ├── SocialController.php
 │   │   │   └── UserController.php
-│   │   ├── Lib/
-│   │   ├── Livewire/
+│   │   ├── Lib/               # Business logic classes
+│   │   ├── Livewire/          # Livewire components
 │   │   ├── Middleware/         # 15 files
 │   │   └── Requests/
 │   ├── Mail/
@@ -157,7 +157,30 @@ Laravel 8.54 application with 28 Eloquent models, 14 admin controllers, Livewire
 - Config: `config/ckfinder.php`
 - Used for image/file management in admin
 
-## Routes Summary (web.php - 645 lines)
+## Lib Classes (Business Logic)
+
+| Class | File | Purpose |
+|-------|------|---------|
+| Order_lib | Order_lib.php | Order creation, cart-to-order conversion, coupon application |
+| Product_lib | Product_lib.php | Product CRUD, slug generation |
+| Coupon_lib | Coupon_lib.php | Coupon validation and application |
+| Terms_lib | Terms_lib.php | Category/taxonomy operations |
+
+### Order_lib Methods (19KB)
+- `insert($request, $cart)` - Create order from cart, handle user creation/lookup
+- Auto-generates order code (DH-XXXXXXXXXX format)
+- Applies coupons, calculates totals
+- Creates order_product and order_coupons records
+
+### Livewire Components
+
+| Component | File | Purpose |
+|-----------|------|---------|
+| OrdersTable | OrdersTable.php | User order history with datatable |
+
+Uses `mediconesystems/livewire-datatables` for paginated, searchable order list.
+
+## Routes Summary (web.php - 644 lines)
 
 ### Route Groups
 | Group | Prefix | Middleware | Purpose |
@@ -238,20 +261,28 @@ POST /loginBiometric        # Biometric authentication
 ```
 resources/views/
 ├── admin/                  # Admin Blade templates
-│   ├── layouts/
-│   ├── members/
-│   ├── portfolio/
+│   ├── layouts/           # Admin layout templates
+│   ├── members/           # Member management views
+│   ├── portfolio/         # Portfolio management views
+│   ├── danhmuc/           # Category management views
+│   ├── product/           # Product management views
+│   ├── baiviet/           # Article management views
 │   └── ...
 ├── auth/                   # Jetstream auth views
+│   ├── login.blade.php
+│   ├── register.blade.php
+│   └── ...
 ├── blocks/                 # Reusable Blade components
 │   ├── header.blade.php
 │   ├── footer.blade.php
 │   └── ...
-├── business/               # Business auth views
+├── business/               # Business portal views
+│   └── auth.blade.php      # Business login/register
 ├── emails/                # Email templates
 ├── page/                   # Frontend pages
 │   ├── home.blade.php
 │   ├── trangchitiet.blade.php
+│   ├── danhmuc.blade.php
 │   └── ...
-└── vendor/                # Package views
+└── vendor/                # Package views (Livewire Datatables)
 ```

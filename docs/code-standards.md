@@ -31,6 +31,12 @@ app/
 │   │   ├── Api/             # API controllers
 │   │   ├── Auth/            # Jetstream auth
 │   │   └── *.php            # Frontend controllers
+│   ├── Lib/                 # Business logic classes
+│   │   ├── Order_lib.php    # Order processing
+│   │   ├── Product_lib.php  # Product operations
+│   │   ├── Coupon_lib.php   # Coupon handling
+│   │   └── Terms_lib.php    # Taxonomy operations
+│   ├── Livewire/            # Livewire components
 │   ├── Middleware/          # Custom middleware
 │   └── Requests/            # Form requests
 ├── Models/                  # Eloquent models
@@ -48,13 +54,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Terms;
 use App\Helpers\Helper;
+use App\Http\Lib\Order_lib;
 
 class PagesController extends Controller
 {
     // Dependency injection in constructor
     protected $orderLib;
 
-    public function __construct(OrderLib $orderLib)
+    public function __construct(Order_lib $orderLib)
     {
         $this->orderLib = $orderLib;
     }
@@ -63,6 +70,79 @@ class PagesController extends Controller
     public function getindex() { }
     public function trangchitiet($slug) { }
     public function trangloai($slug, Request $request) { }
+}
+```
+
+### Lib Classes Pattern
+
+Business logic that does not fit in models or controllers should be extracted to `App\Http\Lib\` classes.
+
+```php
+<?php
+
+namespace App\Http\Lib;
+
+use App\Models\Order;
+use App\Models\order_product;
+use Illuminate\Support\Facades\Session;
+use Gloudemans\Shoppingcart\Facades\Cart;
+
+class Order_lib
+{
+    // Single responsibility: order creation from cart
+    public function insert($request, $cart)
+    {
+        // Create or find user
+        // Generate order code
+        // Apply coupons
+        // Create order + order_product records
+    }
+
+    // Another method for different business operation
+    public function cancel($orderId)
+    {
+        // Cancel order logic
+    }
+}
+```
+
+**When to use Lib classes:**
+- Complex business logic spanning multiple models
+- Cart-to-order conversion workflows
+- Coupon validation and application logic
+- Tax/shipping calculations
+
+**Note:** The `bumbummen99/shoppingcart` package (v4.0) may be abandoned. Consider alternatives if issues arise.
+
+### Livewire Component Standards
+
+Livewire components go in `App\Http\Livewire\` and extend `Controller` or package base classes.
+
+```php
+<?php
+
+namespace App\Http\Livewire;
+
+use App\Models\Order;
+use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
+use Mediconesystems\LivewireDatatables\Column;
+
+class OrdersTable extends LivewireDatatable
+{
+    public $model = Order::class;
+
+    public function builder()
+    {
+        return Order::where('users_id', auth()->id());
+    }
+
+    public function columns()
+    {
+        return [
+            Column::name('CodeOrder')->searchable(),
+            Column::callback('Total', fn($value) => $value . '$')->label('Total'),
+        ];
+    }
 }
 ```
 

@@ -16,8 +16,12 @@ Web platform for Association for Culture and Tourism of Vietnam in Europe (ACTV 
 | Laravel | 8.54 | PHP Framework |
 | Jetstream | 2.4 | Auth scaffolding + Sanctum |
 | Livewire | 2.5 | Interactive components |
+| Sanctum | 2.11 | API authentication |
 | CKFinder | 3.5.2.1 | File management |
+| CKEditor | - | Rich text editing |
 | ShoppingCart | 4.0 | E-commerce cart |
+| PHPMailer | 6.5 | Email sending |
+| Socialite | 5.2 | Social OAuth |
 | Tailwind CSS | - | Styling |
 
 ## Key Features
@@ -38,20 +42,28 @@ app/
 │   │   ├── admin/          # 14 admin controllers
 │   │   ├── Api/            # API controllers
 │   │   ├── Auth/           # Jetstream auth
-│   │   └── PagesController.php, CartController.php, etc.
-│   ├── Middleware/         # 15 middleware files
-│   └── Livewire/
+│   │   ├── BusinessAuthController.php, CartController.php
+│   │   ├── MailerController.php, PagesController.php
+│   │   ├── SearchController.php, SocialController.php
+│   │   └── UserController.php
+│   ├── Lib/                 # Business logic (Order_lib, Product_lib, Coupon_lib, Terms_lib)
+│   ├── Livewire/            # Livewire components (OrdersTable)
+│   ├── Middleware/          # 15 middleware files
+│   └── Requests/           # Form requests
 ├── Models/                 # 28 Eloquent models
-├── Helpers/                # Helper.php, FrontEnd.php
-├── Mail/
-└── Providers/
+├── Helpers/                 # Helper.php, FrontEnd.php
+├── Scopes/                  # where_language global scope
+├── Mail/                    # Email classes
+└── Providers/              # 9 service providers
 config/                     # 21 config files
-database/vnct-db.sql        # 1.4MB database dump
+database/vnct-db.sql        # Database dump (~1.4MB)
 resources/views/
-├── admin/                  # Admin templates
-├── page/                   # Frontend templates
-├── blocks/                 # Blade components
-└── emails/                 # Email templates
+├── admin/                   # Admin templates
+├── page/                    # Frontend templates
+├── blocks/                  # Blade components
+├── business/                # Business portal views
+├── auth/                    # Jetstream auth views
+└── emails/                  # Email templates
 ```
 
 ## Quick Start
