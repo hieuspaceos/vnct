@@ -51,3 +51,7 @@ Thumbs.db
 # Vendor ckfinder cache
 /public/ckfinder/cache/*
 !/public/ckfinder/cache/.gitkeep
+
+# Deployment
+create-deploy-zip.sh
+vnct-deploy.zip
