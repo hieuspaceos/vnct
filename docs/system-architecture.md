@@ -47,7 +47,7 @@ Laravel 8.54 application with MySQL database, Livewire for interactivity, and cu
               ┌───────────▼────────────┐
               │    Data Layer          │
               │   MySQL/MariaDB        │
-              │   vnct-db.sql (1.4MB)  │
+              │   vnct.sql (1.3MB)  │
               └────────────────────────┘
 ```
 
